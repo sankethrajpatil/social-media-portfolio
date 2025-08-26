@@ -1,0 +1,26 @@
+<div class="embed-container">
+    <h3>Embed Social Media Post</h3>
+    <div class="embed-content">
+        <iframe id="embed-frame" src="" width="500" height="600" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <input type="text" id="post-url" placeholder="Enter post URL" />
+    <button onclick="updateEmbed()">Embed Post</button>
+</div>
+
+<script>
+    function updateEmbed() {
+        const url = document.getElementById('post-url').value;
+        const frame = document.getElementById('embed-frame');
+        
+        // Logic to determine the embed URL based on the input URL
+        if (url.includes('instagram.com')) {
+            frame.src = `https://www.instagram.com/p/${url.split('/').pop()}/embed`;
+        } else if (url.includes('facebook.com')) {
+            frame.src = `https://www.facebook.com/plugins/post.php?href=${encodeURIComponent(url)}`;
+        } else if (url.includes('linkedin.com')) {
+            frame.src = `https://www.linkedin.com/embed/feed/update/urn:li:activity:${url.split('/').pop()}`;
+        } else {
+            alert('Invalid URL. Please enter a valid Instagram, Facebook, or LinkedIn post URL.');
+        }
+    }
+</script>
