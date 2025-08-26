@@ -59,14 +59,14 @@ const postLinks = [
 ];
 
 const localImages = [
-    "images/1.png",
-    "images/2.png",
-    "images/3.png",
-    "images/4.png",
-    "images/5.png",
-    "images/6.png",
-    "images/7.png",
-    "images/8.png"
+    "src/images/1.png",
+    "src/images/2.png",
+    "src/images/3.png",
+    "src/images/4.png",
+    "src/images/5.png",
+    "src/images/6.png",
+    "src/images/7.png",
+    "src/images/8.png"
 ];
 
 window.addEventListener('DOMContentLoaded', () => {
